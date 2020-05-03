@@ -1,0 +1,15 @@
+config:
+  azure:environment: public
+  iotedge-test-vm:host: edge-test
+  iotedge-test-vm:hubConnection:
+    secure: AAABANBidjnTa5a2ZMsud4mN6aEImoy0nG3hjB0C6FEE3ESNKdNjRwwWj7r3k0/rPW0WJHFeG3LCwOih4/rGp3hPRtBPirIi+ZxTqX9oIsOBchcFke/nV4zukfo5ktUXvD+aN80aRGWYdgOnh8DdxCjowbooq+fdAEH5YOo0QADY/UcncE31pcM1NKFGk1jatlj6h03ZmgrNfQ==
+  iotedge-test-vm:imageOffer: Debian
+  iotedge-test-vm:imagePublisher: credativ
+  iotedge-test-vm:imageSku: "9"
+  iotedge-test-vm:location: westus
+  iotedge-test-vm:password:
+    secure: AAABAFK33ZU2WcrwfmTl4EN5gWS6KOgcZwhv608nQt626xmzB94G2rt/
+  iotedge-test-vm:resourceGroup: dev
+  iotedge-test-vm:setupScript: debian-9
+  iotedge-test-vm:size: Standard_A0
+  iotedge-test-vm:username: edge
