@@ -99,7 +99,6 @@ const chmodSetup = new provisioners.RemoteExec("setup-chmod", {
 
 const hubConn = config.requireSecret("hubConnection");
 
-/*
 const secrets = pulumi.all({
     hubConn,
     hostPassword
@@ -113,14 +112,6 @@ secrets.apply(s => {
         command: command,
     }, { dependsOn: chmodSetup });
 });
-*/
-
-// Run setup script to install IoT Edge and otherwise configure machine
-let command = `echo "${hostPassword.get()}" | sudo -S ./setup.sh --hub "${hubConn.get()}"`;
-new provisioners.RemoteExec("setup-run", {
-    conn,
-    command: command,
-}, { dependsOn: chmodSetup });
 
 // The public IP address is not allocated until the VM is running, so wait for that
 // resource to create, and then lookup the IP address again to report its public IP.
